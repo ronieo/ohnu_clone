@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메인 | 오늘의집</title>
+  
+  <!-- FAVICON -->
+  <link href="https://assets.ohou.se/web/assets/favicon.png" rel="shortcut icon"/>
+  
+  <!-- CSS RESET -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+  
+  <!-- FONT -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;display=swap&amp;subset=korean" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+  
+  <!-- LODASH -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <div class="top-banner">
+    <a href="javascript:void(0)" class="top-banner">
+      <img src="./images/top-banner.png" alt="상단배너">
+    </a>
+  </div>
+  
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <svg class="css-bsbra5" width="74" height="30" viewBox="0 0 74 30" preserveAspectRatio="xMidYMid meet">
+          <g fill="none" fill-rule="evenodd">
+            <path fill="#000"
+              d="M14.2 25.17H9.28V20.7a1.45 1.45 0 0 0-2.9 0v4.47H1.44a1.45 1.45 0 1 0 0 2.9H14.2a1.45 1.45 0 0 0 0-2.9M4.5 9.15c0-4.6 2.08-5.28 3.33-5.28 1.24 0 3.33.69 3.33 5.28v.36c0 4.6-2.09 5.28-3.33 5.28-1.25 0-3.34-.69-3.34-5.28v-.36zm3.33 8.54c3.84 0 6.23-3.13 6.23-8.18v-.36c0-5.05-2.39-8.18-6.23-8.18-3.85 0-6.24 3.13-6.24 8.18v.36c0 5.05 2.39 8.19 6.24 8.19zm25.54-7.34H17.81a1.45 1.45 0 0 0 0 2.9h15.56a1.45 1.45 0 1 0 0-2.9m-1.55 15.5c-7.08 1.83-9.45.79-10.14.25-.45-.35-.65-.8-.65-1.48v-.87h10.25c.8 0 1.46-.65 1.46-1.45v-5.08c0-.8-.66-1.45-1.46-1.45h-11.7a1.45 1.45 0 1 0 0 2.9h10.25v2.18H19.57c-.8 0-1.45.65-1.45 1.45v2.32a4.6 4.6 0 0 0 1.78 3.78c1.2.93 2.94 1.39 5.21 1.39 2.05 0 4.54-.38 7.44-1.13a1.45 1.45 0 1 0-.73-2.82M20.3 7.83h10.8a1.45 1.45 0 1 0 0-2.9h-9.35V1.45a1.45 1.45 0 1 0-2.9 0v4.93c0 .8.65 1.45 1.45 1.45">
+            </path>
+            <rect width="3" height="15" x="70" fill="#000" rx="1.5"></rect>
+            <path fill="#000"
+              d="M64.5 13.28a1.45 1.45 0 0 0 2.73-1c-.05-.13-1-2.68-3.38-4.5l3.7-4.1a1.45 1.45 0 0 0-1.09-2.42h-9.05a1.45 1.45 0 1 0 0 2.9h5.8l-6.88 7.64a1.45 1.45 0 1 0 2.16 1.95l3.41-3.8a8 8 0 0 1 2.6 3.33M69.56 26.52h-7.01a.82.82 0 0 1-.82-.82v-1.95h8.65v1.95c0 .45-.37.82-.82.82m2.27-9.37c-.8 0-1.45.65-1.45 1.45v2.25h-8.65V18.6a1.45 1.45 0 1 0-2.9 0v7.1a3.73 3.73 0 0 0 3.72 3.72h7.01a3.73 3.73 0 0 0 3.72-3.72v-7.1c0-.8-.65-1.45-1.45-1.45M42.46 3.87c2.22 0 2.33 4.24 2.33 5.08 0 .85-.11 5.09-2.33 5.09-2.21 0-2.32-4.24-2.32-5.08 0-.86.11-5.09 2.32-5.09m0 13.07c1.76 0 3.23-.93 4.14-2.62.71-1.34 1.1-3.2 1.1-5.36s-.39-4.02-1.1-5.37A4.6 4.6 0 0 0 42.46.97c-1.76 0-3.22.93-4.13 2.62-.72 1.35-1.1 3.2-1.1 5.37s.38 4.01 1.1 5.36a4.59 4.59 0 0 0 4.13 2.62">
+            </path>
+            <path fill="#000"
+              d="M51.4.49c-.8 0-1.45.65-1.45 1.45v17.78c-1.93.6-5.75 1.13-10.38 1.13h-2.2a1.45 1.45 0 0 0 0 2.9h2.2c2.64 0 7.21-.23 10.38-1.02v4.84a1.45 1.45 0 0 0 2.9 0V1.94c0-.8-.65-1.45-1.45-1.45">
+            </path>
+          </g>
+        </svg>
+      </div>
+  
+      <!-- GNB -->
+      <nav>
+        <ul class="gnb">
+          <li><a href="javascript:void(0)"></a>커뮤니티</li>
+          <li><a href="javascript:void(0)"></a>스토어</li>
+          <li><a href="javascript:void(0)"></a>이사/시공/수리</li>
+        </ul>
+      </nav>
+
+      <div class="container__user">
+        <!-- SEARCH -->
+        <div class="search">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+          <input placeholder="통합검색">
+        </div>
+      
+        <!-- CART -->
+        <span class="material-symbols-outlined">shopping_cart</span>
+      
+        <!-- USER -->
+        <div class="user-menu">
+          <ul class="user-menu">
+            <li>로그인</li>
+            <li><p>회원가입</p> </li>
+            <li>고객센터</li>
+            <button class="write-btn" id="layer-popup">
+              글쓰기<span class="material-symbols-outlined">expand_more</span>
+            </button>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SUB MENU -->
+  <div class="sub-menu">
+    <nav>
+      <ul class="sub-menu__nav">
+        <li><a href="javascript:void(0)">홈</a>
+        <div class="blue-line"></div>
+        </li>
+        <li><a href="javascript:void(0)">팔로잉</a></li>
+        <li><a href="javascript:void(0)">사진</a></li>
+        <li><a href="javascript:void(0)">집들이</a></li>
+        <li><a href="javascript:void(0)">노하우</a></li>
+        <li><a href="javascript:void(0)">전문가집들이</a></li>
+        <li><a href="javascript:void(0)">셀프가이드</a></li>
+        <li><a href="javascript:void(0)">질문과답변</a></li>
+        <li><a href="javascript:void(0)">3D인테리어</a></li>
+        <li><a href="javascript:void(0)">이벤트</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- SECTION -->
+    <section class="main__section">
+      <img class="main__foto" src="./images/main.jpg" alt="main">
+      <div class="main__title">
+        <p class="title">재료,가구,소품,모든 것이 편안한🥰신혼집</p>
+        <span class="user__id">
+          <img class="user__image" src="./images/user.jpg" alt="user-image">소솜네</span>
+      </div>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/slid1.jfif" alt="slide">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/slid2.jpg" alt="slide">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/slid3.jfif" alt="slide">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/slid4.jfif" alt="slide">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/slid5.jfif" alt="slide">
+            </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- MAIN_TAB -->
+  <main>
+    <div class="main-tab">
+      <ul class="main-tabs">
+        <li>
+          <img src="./images/main-tabs/main-tab-shopping.png" alt="doShopping">
+          <span class="main-tab-title">
+            쇼핑하기
+          </span>
+        </li>
+        <li>
+          <img src="./images/main-tabs/main-tab-scrapbook.png" alt="sale">
+          <span class="main-tab-title">
+            스크랩북
+          </span>
+        </li>
+        <li>
+          <img src="./images/main-tabs/main-tab-time-deal.png" alt="todaysDeal">
+          <span class="main-tab-title">
+            오늘의딜
+          </span>
+        
+        </li>
+        <li>
+          <img src="./images/main-tabs/main-tab-whattodo.jfif" alt="whatToDo">
+          <span class="main-tab-title">
+            오늘뭐하지
+          </span>
+        </li>
+        <li>
+          <img src="./images/main-tabs/main-tab-foods.png" alt="foods">
+          <span class="main-tab-title">
+            식품관
+          </span>
+        </li>
+        <li>
+          <img src="./images/main-tabs/main-tab-look-house.png" alt="lookHouse">
+          <span class="main-tab-title">
+            집들이
+          </span>
+        </li>
+        <li>
+          <img src="./images/main-tabs/main-tab-honyjam.png" alt="honeyJam">
+          <span class="main-tab-title">
+            꿀잼시리즈
+          </span>
+        </li>
+        <li>
+          <img src="./images/main-tabs/main-tab-fast.png" alt="fastDelivery">
+          <span class="main-tab-title">
+            빠른배송
+          </span>
+        </li>
+        <li>
+          <img src="./images/main-tabs/main-tab-easy.png" alt="easyMoving">
+          <span class="main-tab-title">
+            쉬운이사
+          </span>
+        </li>
+        <li>
+          <img src="./images/main-tabs/main-tab-remo.png" alt="remodeling">
+          <span class="main-tab-title">
+            리모델링
+          </span>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- MAIN_TAB_CONTENTS -->
+  <div class="main-tab-container">
+    <div class="strong-more">
+      <strong>방 분위기를 한층 살려줄 아이템💡</strong>
+      <a href="javascript:void(0)">더보기</a>
+    </div>
+    <ul class="main-tab__year-end">
+      <li>
+        <img src="./images/contants-tabs/year-end1.jpg" alt="yearEnd">
+        <div class="h3">
+          <h3 class="color">쨍한 형광포인트🎇</h3>
+          <h3 class="no-color">포인트 형광포스터</h3>
+        </div>
+      </li>
+      <li>
+        <img src="./images/contants-tabs/year-end2.jpg" alt="yearEnd">
+        <div class="h3">
+          <h3 class="color">올해도 플랜테리어🌿</h3>
+          <h3 class="no-color">흰 방에 식물포인트</h3>
+        </div>
+      </li>
+      <li>
+        <img src="./images/contants-tabs/year-end3.jfif" alt="yearEnd">
+        <div class="h3">
+          <h3 class="color">럭셔리 한 방울</h3>
+          <h3 class="no-color">레플리카 향수</h3>
+        </div>
+      </li>
+      <li>
+        <img src="./images/contants-tabs/year-end-4.jfif" alt="yearEnd">
+        <div class="h3">
+          <h3 class="color">조명이 주는 안락함</h3>
+          <h3 class="no-color">포인트 조명 둘러보기</h3>
+        </div>
+      </li>
+    </ul>
+    <div class="strong-more">
+      <strong>32평대 공간의 대변신✨</strong>
+            <a href="javascript:void(0)">더보기</a>
+    </div>
+
+      <ul class="main-tab__space">
+        <li>
+          <img src="./images/contants-tabs/space-1.jfif" alt="space">
+          <div class="h3">
+            <h3 class="color">오래된 아파트의 변신</h3>
+            <h3 class="no-color">화이트와 패브릭 톤온톤</h3>
+          </div>
+        </li>
+        <li>
+          <img src="./images/contants-tabs/space-2.jpg" alt="space">
+          <div class="h3">
+            <h3 class="color">포인트 인테리어</h3>
+            <h3 class="no-color">오렌지 소파</h3>
+          </div>
+        </li>
+        <li>
+          <img src="./images/contants-tabs/space-3.jpg" alt="space">
+          <div class="h3">
+            <h3 class="color">톤온톤 인테리어</h3>
+            <h3 class="no-color">그레이로 안정감 주기</h3>
+          </div>
+        </li>
+        <li>
+          <img src="./images/contants-tabs/space-4.jpg" alt="space">
+          <div class="h3">
+            <h3 class="color">반려동물과 인테리어</h3>
+            <h3 class="no-color">조화롭게 거실 꾸미기</h3>
+          </div>
+        </li>
+      </ul>
+
+      <div class="strong-more">
+        <strong>오늘의 인기 시리즈</strong>
+        <a href="javascript:void(0)">더보기</a>
+      </div>
+      <ul class="main-tab__recommand">
+        <li><img src="./images/contants-tabs/recommand-1.jpg" alt="recommand">
+          <div class="h3">
+            <h3 class="color">올해의 의자</h3>
+            <h3 class="no-color">의자로 만나는 디자이너들</h3>
+          </div>
+        </li>
+        <li><img src="./images/contants-tabs/recommand-2.jfif" alt="recommand">
+          <div class="h3">
+            <h3 class="color">주간집밥식단표</h3>
+            <h3 class="no-color">3인 가족 식비 5만원</h3>
+          </div>
+        </li>
+        <li><img src="./images/contants-tabs/recommand-3.jpg" alt="recommand">
+          <div class="h3">
+            <h3 class="color">홈파티에 진심인편</h3>
+            <h3 class="no-color">플레이팅 꿀팁보기</h3>
+          </div>
+        </li>
+        <li><img src="./images/contants-tabs/recommand-4.jfif" alt="recommand">
+          <div class="h3">
+            <h3 class="color">좋은것만 듣고살자</h3>
+            <h3 class="no-color">가성비 스피커 보기</h3>
+          </div>
+        </li>
+      </ul>
+  </div>
+
+  <!-- CATEGORY_TAB -->
+  <nav class="category">
+    <div class="strong-more">
+      <strong>카테고리별 상품찾기</strong>
+      <a href="javascript:void(0)">더보기</a>
+    </div>
+    <div class="category-tab">
+      <ul class="category-tabs">
+        <li class="item"><img src="./images/cartegory-tabs/carte-deco.png" alt="deco,plant">
+          <span class="category-tabs-title">
+            데코·식물
+          </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-furniture.png" alt="furniture">
+          <span class="category-tabs-title">
+            가구
+          </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-fabric.png" alt="fabric">
+          <span class="category-tabs-title">
+            패브릭
+          </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-electronic.png" alt="electronic">
+          <span class="category-tabs-title">
+            가전·디지털
+          </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-kitchen.png" alt="kitchen">
+          <span class="category-tabs-title">
+            주방용품
+          </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-foods.png" alt="foods">
+          <span class="category-tabs-title">
+            식품
+          </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-light.png" alt="light">
+          <span class="category-tabs-title">
+            조명
+          </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-box.png" alt="box">
+          <span class="category-tabs-title">
+            수납·정리
+          </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-living-product.png" alt="living-product">
+          <span class="category-tabs-title">
+            생활용품
+          </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-living-stuff.png" alt="">
+          <span class="category-tabs-title">
+            생필품 </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-kid.png" alt="kid">
+          <span class="category-tabs-title">
+            유아·아동
+          </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-pets.png" alt="pets">
+          <span class="category-tabs-title">
+            반려동물 </span>
+        </li>
+        <li class="item"><img src="./images/cartegory-tabs/carte-workout.png" alt="">
+          <span class="category-tabs-title">
+            실내운동 </span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CATEGORY_TAB_CONTENTS -->
+  <div class="category-tab-container">
+    <div class="strong-more">
+      <strong>오늘의 기획전</strong>
+      <a href="javascript:void(0)">더보기</a>
+    </div>
+      <ul class="main-tab__info">
+        <li><img src="./images/info-1.jpg" alt="info">
+          <div class="exhibi">
+            <h4 class="exhibi">새해맞이 초특가 특템찬스</h3>
+            <h3 class="exhibi-second">연휴특가 ~86%</h3>
+          </div>
+        </li>
+        <li><img src="./images/info-2.jpg" alt="info">
+          <div class="exhibi">
+            <h4 class="exhibi">놓치면 품절! 올겨울 핫템</h3>
+            <h3 class="exhibi-second">WINTER SEASON OFF</h3>
+          </div>
+        </li>
+        <li><img src="./images/info-3.png" alt="info">
+          <div class="exhibi">
+            <h4 class="exhibi">새해맞이 쿠폰 + 전품목 무료배송</h3>
+            <h3 class="exhibi-second">새해맞이 FOOD WEEK ~64%</h3>
+          </div>
+        </li>
+        <li><img src="./images/info-4.png" alt="info">
+          <div class="exhibi">
+            <h4 class="exhibi">품절주의! 역대급특가</h3>
+            <h3 class="exhibi-second">자취생 추천템 ~75%</h3>
+          </div>
+        </li>
+      </ul>
+      <div class="strong-more">
+        <strong>다가오는 새해를 맞이하는 법 ☘️</strong>
+        <a href="javascript:void(0)">더보기</a>
+      </div>
+      <ul class="main-tab__hot-item">
+        <li><img src="./images/contants-tabs/hot-item1.jpg" alt="hot-item">
+          <div class="h3">
+            <h3 class="color">아침에 빵한조각</h3>
+            <h3 class="no-color">토스트요리 5가지</h3>
+          </div>
+        </li>
+        <li><img src="./images/contants-tabs/hot-item2.jpg" alt="hot-item">
+          <div class="h3">
+            <h3 class="color">컴팩트한 멀티탭</h3>
+            <h3 class="no-color">감성까지 챙기기</h3>
+          </div>
+        </li>
+        <li><img src="./images/contants-tabs/hot-item3.jpg" alt="hot-item">
+          <div class="h3">
+            <h3 class="color">아메리칸모던</h3>
+            <h3 class="no-color">집기류 둘러보기</h3>
+          </div>
+        </li>
+        <li><img src="./images/contants-tabs/hot-item4.jfif" alt="hot-item">
+          <div class="h3">
+            <h3 class="color">올해는 깔끔하게!</h3>
+            <h3 class="no-color">상부장 정리법</h3>
+          </div>
+        </li>
+      </ul>
+      <div class="strong-more">
+        <strong>내 스타일로 가득한 최애공간🎄</strong>
+        <a href="javascript:void(0)">더보기</a>
+      </div>
+      <ul class="main-tab__fav-foto">
+        <li><img src="./images/contants-tabs/fav-foto-1.jpeg" alt="fav-foto">
+          <div class="h3">
+            <h3 class="color">빨강빨강강렬하게</h3>
+            <h3 class="no-color">톤온톤 겨울공간</h3>
+          </div>
+        </li>
+        <li><img src="./images/contants-tabs/fav-foto-2.jpeg" alt="fav-foto">
+          <div class="h3">
+            <h3 class="color">작은조명의 힘</h3>
+            <h3 class="no-color">포근하게 포인트주기</h3>
+          </div>
+        </li>
+        <li><img src="./images/contants-tabs/fav-foto-3.jpeg" alt="fav-foto">
+          <div class="h3">
+            <h3 class="color">식집사의 하루</h3>
+            <h3 class="no-color">식물 잘키우는법</h3>
+          </div>
+        </li>
+        <li><img src="./images/contants-tabs/fav-foto-4.jpeg" alt="fav-foto">
+          <div class="h3">
+            <h3 class="color">제철과일 더 맛있게🍓</h3>
+            <h3 class="no-color">딸기요리 10가지</h3>
+          </div>
+        </li>
+      </ul>
+  </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer">
+
+      <section class="footer__left">
+        <ul>
+          <li class="item_help">고객센터 > </li>
+          <li class="item_num">1670-0876</li>
+          <li class="item_num">09:00~18:00</li>
+          <div class="item_time">
+            <li class="item_time">
+            평일: 전체 문의 상담 가능<br>
+            주말, 공휴일 : 오늘의집 직접배송, 이사/시공/수리 문의 상담 가능
+            </li>
+          </div>
+          <li class="item_qa">카톡 상담(평일 09:00~18:00)</li>
+          <li class="item_email">이메일 문의</li>
+        </ul>
+      </section>
+
+      <div class="line"></div>
+      
+      <section class="footer__middle">
+        <ul>
+          <li class="item">회사소개</li>
+          <li class="item">채용정보</li>
+          <li class="item">이용약관</li>
+          <li class="item">개인정보 처리방침</li>
+          <li class="item">공지사항</li>
+          <li class="item">안전거래센터</li>
+          <li class="item">입점신청</li>
+          <li class="item">제휴/광고문의</li>
+          <li class="item">사업자 구매 회원</li>
+          <li class="item">시공파트너 안내</li>
+          <li class="item">상품광고 소개</li>
+          <li class="item">고객의 소리</li>
+        </ul>
+      </section>
+
+      <div class="line"></div>
+
+      <section class="footer__right">
+        <ul>
+          <li class="item__about">
+            (주)버킷플레이스 | 대표이사 이승재 |
+            서울 서초구 서초대로74길 4 삼성생명서초타워 25층, 27층<br>
+            contact@bucketplace.net | 사업자등록번호 119-86-91245 <b class="keyword">사업자정보확인</b> <br>
+            통신판매업신고번호 제2018-서울서초-0580호
+          </li>
+
+          <div class="item__mark">
+            <li class="item__mark__isms">
+              <img src="./images/footer-isms.png" alt="isms">
+              오늘의집 서비스 운영<br>2021. 09. 08 ~ 2024. 09. 07
+            </li>
+            <li class="item_mark__dnv">
+              <img src="./images/footer_dnv.png" alt="footer_dnv">
+              고객님이 현금결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다. 서비스가입사실확인
+            </li>
+          </div>
+
+          <li class="item__policy">
+            (주)버킷플레이스는 통신판매중개자로 거래 당사자가 아니므로, 판매자가 등록한 상품정보 및 거래 등에 대해<br>
+            책임을 지지 않습니다. 단, (주)버킷플레이스가 판매자로 등록 판매한 상품은 판매자로서 책임을 부담합니다.
+          </li>
+
+          <div class="item__sns">
+            <img src="./images/youtube.png" alt="youtube">
+            <img src="./images/instagram.png" alt="instagram">
+            <img src="./images/facebook.png" alt="facebook">
+          </div>
+          
+          <li class="item__copyright">Copyright 2022. ronieo, All rights reserved.</li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+</body>
+
+</html>
