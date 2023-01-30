@@ -1,0 +1,25 @@
+{
+  "name": "ohnu_clone",
+  "version": "1.0.0",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/189291ca-5df7-46a3-8b21-37b5cc93bab5/deploy-status)](https://app.netlify.com/sites/unique-twilight-e140b7/deploys)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronieo/ohnu_clone.git"
+  },
+  "keywords": [],
+  "author": "ronieo <romelzen50@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronieo/ohnu_clone/issues"
+  },
+  "homepage": "https://github.com/ronieo/ohnu_clone#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3"
+  }
+}
